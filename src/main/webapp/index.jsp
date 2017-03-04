@@ -9,7 +9,7 @@
     <br>
     <main>
         <h1 class="h2 color_orange text-center">
-            Student peer evaluations/feedback, shareable instructor comments, and more...
+            Student (TEST) peer evaluations/feedback, shareable instructor comments, and more...
         </h1>
         <div class="row">
             <img class="center-block img-responsive" alt="Overview of TEAMMATES - anonymous peer feedback and confidential peer evaluations" src="images/overview.png">
