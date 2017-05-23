@@ -6,6 +6,7 @@ branches:
   only:
     - master
     - release
+    - Closed-Email
 
 notifications:
   email: false
