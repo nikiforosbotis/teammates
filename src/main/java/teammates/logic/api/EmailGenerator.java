@@ -465,12 +465,12 @@ public class EmailGenerator {
         String instructorFragmentArgumentStudents = "";
 
         for (InstructorAttributes instructor : instructors) {
-            emails.add(generateFeedbackSessionClosedEmail(course, session, instructor.name, instructor.email, 
-            		instructorFragmentArgumentInstructors));
+            emails.add(generateFeedbackSessionClosedEmail(course, session, instructor.name, instructor.email,
+                    instructorFragmentArgumentInstructors));
         }
         for (StudentAttributes student : students) {
-            emails.add(generateFeedbackSessionClosedEmail(course, session, student.name, student.email, 
-            		instructorFragmentArgumentStudents));
+            emails.add(generateFeedbackSessionClosedEmail(course, session, student.name, student.email,
+                    instructorFragmentArgumentStudents));
         }
 
         return emails;
