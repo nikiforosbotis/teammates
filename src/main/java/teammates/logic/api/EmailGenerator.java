@@ -426,7 +426,7 @@ public class EmailGenerator {
 
     private String generateInstructorFragment(String courseId, String courseName) {
 
-    	return "<p>The email below has been sent to students of course: "
+        return "<p>The email below has been sent to students of course: "
                 + SanitizationHelper.sanitizeForHtml(courseId) + ", "
                 + SanitizationHelper.sanitizeForHtml(courseName)
                 + ".<br>" + Const.EOL + "<br>" + Const.EOL
