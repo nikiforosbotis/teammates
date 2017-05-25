@@ -430,12 +430,12 @@ public class EmailGenerator {
 
         /*If the courseName == "", we understand that this method was called by the
         generateFeedbackSessionEmailBaseForInstructors, which does not need the courseName */
-        if(courseName != "") {
+        if (!"".equals(courseName)) {
             fragmentParameters = SanitizationHelper.sanitizeForHtml(courseId);
         } else {
             fragmentParameters = SanitizationHelper.sanitizeForHtml(courseId) + ", "
                     + SanitizationHelper.sanitizeForHtml(courseName);
-    	}
+        }
 
         return "<p>The email below has been sent to students of course: "
                 + fragmentParameters
