@@ -437,7 +437,7 @@ public class EmailGenerator {
             CourseAttributes course, FeedbackSessionAttributes session, InstructorAttributes instructor,
             String template, String subject) {
 
-    	String instructorFragment = generateInstructorFragment(course.getId(), "");
+        String instructorFragment = generateInstructorFragment(course.getId(), "");
 
         String emailBody = Templates.populateTemplate(template,
                 "${userName}", SanitizationHelper.sanitizeForHtml(instructor.name),
