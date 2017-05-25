@@ -426,9 +426,19 @@ public class EmailGenerator {
 
     private String generateInstructorFragment(String courseId, String courseName) {
 
+        String fragmentParameters;
+
+        /*If the courseName == "", we understand that this method was called by the
+        generateFeedbackSessionEmailBaseForInstructors, which does not need the courseName */
+        if(courseName != "") {
+            fragmentParameters = SanitizationHelper.sanitizeForHtml(courseId);
+        } else {
+            fragmentParameters = SanitizationHelper.sanitizeForHtml(courseId) + ", "
+                    + SanitizationHelper.sanitizeForHtml(courseName);
+    	}
+
         return "<p>The email below has been sent to students of course: "
-                + SanitizationHelper.sanitizeForHtml(courseId) + ", "
-                + SanitizationHelper.sanitizeForHtml(courseName)
+                + fragmentParameters
                 + ".<br>" + Const.EOL + "<br>" + Const.EOL
                 + "=== Email message as seen by the students ===</p>" + Const.EOL;
     }
