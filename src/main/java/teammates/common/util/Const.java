@@ -816,6 +816,13 @@ public final class Const {
         public static final String LOGIN_INSTRUCTOR = "instructor";
         public static final String LOGIN_STUDENT = "student";
 
+        public static final String FULL_NAME = "fullname";
+        public static final String UNIVERSITY = "university";
+        public static final String COUNTRY = "country";
+        public static final String URL = "url";
+        public static final String INSTITUTIONAL_EMAIL = "email";
+        public static final String INSTRUCTOR_COMMENTS = "comments";
+
         //Email parameters
         public static final String EMAIL_RECEIVER = "user";
         public static final String EMAIL_COURSE = "course";

@@ -12,13 +12,12 @@ public class InstructorRequestAccountPageAction extends Action {
 	
 	@Override
     public ActionResult execute() {
-		//TODO: to be added in const.ParamsNames instead of the plain text
-        String name = getRequestParamValue("fullname");
-        String university = getRequestParamValue("university");
-        String country = getRequestParamValue("country");
-        String url = getRequestParamValue("URL");
-        String email = getRequestParamValue("email");
-        String comments = getRequestParamValue("comments");
+        String name = getRequestParamValue(Const.ParamsNames.FULL_NAME);
+        String university = getRequestParamValue(Const.ParamsNames.UNIVERSITY);
+        String country = getRequestParamValue(Const.ParamsNames.COUNTRY);
+        String url = getRequestParamValue(Const.ParamsNames.URL);
+        String email = getRequestParamValue(Const.ParamsNames.INSTITUTIONAL_EMAIL);
+        String comments = getRequestParamValue(Const.ParamsNames.INSTRUCTOR_COMMENTS);
 
         Assumption.assertNotNull(name);
         Assumption.assertNotNull(university);
