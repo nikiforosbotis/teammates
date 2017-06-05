@@ -12,16 +12,15 @@ public class InstructorRequestAccountSaveAction extends Action {
 
 	 @Override
 	 public ActionResult execute() throws EntityDoesNotExistException {
-		//TODO: to be added in const.ParamsNames instead of the plain text
-	     String name = getRequestParamValue("fullname");
-	     Assumption.assertPostParamNotNull("fullname", name);
-	     String university = getRequestParamValue("university");
-	     Assumption.assertPostParamNotNull("university", university);
-	     String country = getRequestParamValue("country");
-	     String email = getRequestParamValue("email");
-	     Assumption.assertPostParamNotNull("email", email);
-	     String url = getRequestParamValue("URL");
-	     String comments = getRequestParamValue("comments");
+	     String name = getRequestParamValue(Const.ParamsNames.FULL_NAME);
+	     Assumption.assertPostParamNotNull(Const.ParamsNames.FULL_NAME, name);
+	     String university = getRequestParamValue(Const.ParamsNames.UNIVERSITY);
+	     Assumption.assertPostParamNotNull(Const.ParamsNames.UNIVERSITY, university);
+	     String country = getRequestParamValue(Const.ParamsNames.COUNTRY);
+	     String email = getRequestParamValue(Const.ParamsNames.INSTITUTIONAL_EMAIL);
+	     Assumption.assertPostParamNotNull(Const.ParamsNames.INSTITUTIONAL_EMAIL, email);
+	     String url = getRequestParamValue(Const.ParamsNames.URL);
+	     String comments = getRequestParamValue(Const.ParamsNames.INSTRUCTOR_COMMENTS);
 
 	     /* Setup data for process results */
 	     try {
